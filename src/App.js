@@ -2,7 +2,7 @@ import Button from "./components/Button";
 import Header from "./components/Header";
 import {Image} from "./components/Image";
 import Navbar from "./components/Navbar";
-
+import Practice from"./components/Practice";
 
 function App(){
   return (
@@ -15,8 +15,9 @@ function App(){
     <Button lable="Login"/>
     <Header/>
     <Image/>
+    <practice/>
   </div>
-  )
+  );
 
 
 }
