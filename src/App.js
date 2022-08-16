@@ -1,5 +1,6 @@
-
+import React from "react"
 import Button from "./components/Button";
+import Form from "./components/Form";
 import Header from "./components/Header";
 import {Image} from "./components/Image";
 import Navbar from "./components/Navbar";
@@ -9,7 +10,8 @@ import TaskManager from "./components/TaskManager";
 function App(){
   return (
     <div>
-    <TaskManager/>
+    {/* <TaskManager/> */}
+   <Form/>
  {/* <Navbar/>
     <Button />
     <Button lable="Add to cart"/>

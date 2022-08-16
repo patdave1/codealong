@@ -1,5 +1,5 @@
 import React from "react";
-import {TrashIcon} from "@heroicon/react/outline";
+import {TrashIcon} from "@heroicons/react/outline";
 
 function TaskItem({task, handleDelete}) {
    return ( 

@@ -23,7 +23,7 @@ SetTask(newTask);
         <div className="h-screen bg-blue-600 justify-center items-center">
         <div className="max-w-xl bg-white rounded-xl px-5 py-10">
         <form 
-    
+            onSubmit={handleSubmit}
         className="space-x-5 w-full flex w[30rem] mb-10 justify-between">
             <input  type="text" 
             className="border-2 border-blue-400 p-2 rounded-md outline-name w-10/12"
@@ -37,7 +37,7 @@ SetTask(newTask);
 
             <div className="space-y-2 overflow-y-auto h-56">
                {tasks.map((task) => 
-               <TaskItem task={task} /> )}
+               <TaskItem task={task} handleDelete={handleDelete} /> )}
                         
                    
                
