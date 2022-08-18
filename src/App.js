@@ -1,18 +1,19 @@
-import React from "react"
+import React from "react";
 import Button from "./components/Button";
 import Form from "./components/Form";
 import Header from "./components/Header";
-import {Image} from "./components/Image";
+import { Image } from "./components/Image";
 import Navbar from "./components/Navbar";
-import Practice from"./components/Practice";
+import Practice from "./components/Practice";
+import ProductList from "./components/ProductList";
 import TaskManager from "./components/TaskManager";
 
-function App(){
+function App() {
   return (
     <div>
-    {/* <TaskManager/> */}
-   <Form/>
- {/* <Navbar/>
+      {/* <TaskManager/> */}
+      <Form />
+      {/* <Navbar/>
     <Button />
     <Button lable="Add to cart"/>
     <Button lable="Read more"/>
@@ -21,10 +22,9 @@ function App(){
     <Header/>
     <Image/>
     <practice/> */}
-  </div>
+      <ProductList />
+    </div>
   );
-
-
 }
 
-export default App
+export default App;
