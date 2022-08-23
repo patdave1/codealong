@@ -3,7 +3,7 @@ import React from "react";
 
 function TaskItem({ task, handleDelete }) {
   return (
-    <div className="flex itmes-center justify-between bg-teal-100 p-2 border-2 border-gray-300 rounded-md">
+    <div className="flex items-center justify-between bg-teal-100 p-2 border-2 border-gray-300 rounded-md">
       <div>
         <div className="flex space-x-2"></div>
         <input

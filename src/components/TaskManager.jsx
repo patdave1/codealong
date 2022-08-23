@@ -1,16 +1,16 @@
-import React, { usestate, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { v4 as uuid } from "uuid";
 import TaskItem from "./TaskItem";
 
 function TaskManager() {
-  const [tasks, SetTask] = usestate(() => {
+  const [tasks, SetTask] = useState(() => {
     const tasks = localStorage.getItem("tasks");
     if (!tasks) return [];
     return JSON.parse(tasks);
   });
 
-  const [input, setInput] = usestate("");
+  const [input, setInput] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     if ("input === ") return;
@@ -37,7 +37,7 @@ function TaskManager() {
       <div className="max-w-xl bg-white rounded-xl px-5 py-10">
         <form
           onSubmit={handleSubmit}
-          className="space-x-5 w-full flex w[30rem] mb-10 justify-between"
+          className="space-x-5 flex w-[30rem] mb-10 justify-between"
         >
           <input
             type="text"
@@ -48,10 +48,10 @@ function TaskManager() {
           <button
             type="submit"
             className="border-2 bg-blue-600  text-white text text-lg py-2 px-7 rounded-md"
+            disable={input === ""}
           >
             Add
           </button>
-          disable={input === ""}
         </form>
 
         <div className="space-y-2 overflow-y-auto h-56">

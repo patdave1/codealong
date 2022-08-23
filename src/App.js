@@ -10,18 +10,18 @@ import TaskManager from "./components/TaskManager";
 
 function App() {
   return (
-    <div>
-      {/* <TaskManager/> */}
-      <Form />
-      {/* <Navbar/>
-    <Button />
-    <Button lable="Add to cart"/>
-    <Button lable="Read more"/>
-    <Button lable="Register"/>
-    <Button lable="Login"/>
-    <Header/>
-    <Image/>
-    <practice/> */}
+    <div className="h-screen bg-slate-500">
+      {/* <TaskManager /> */}
+      {/* <Form /> */}
+      {/* <Navbar /> */}
+      {/* <Button /> */}
+      {/* <Button label="Add to cart" /> */}
+      {/* <Button label="Read more" /> */}
+      {/* <Button label="Register" /> */}
+      {/* <Button label="Login" /> */}
+      {/* <Header /> */}
+      {/* <Image /> */}
+      {/* <Practice /> */}
       <ProductList />
     </div>
   );
