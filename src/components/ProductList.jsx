@@ -28,7 +28,6 @@ const ProductList = () => {
     ))}
     </div>
     
-  )
-}
-
-export default ProductList
+  );
+};
+export default ProductList;
