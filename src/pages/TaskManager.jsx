@@ -22,7 +22,7 @@ function TaskManager() {
     const newTasks = {
       id: uuid(),
       text: input,
-      completed: true,
+      completed: false,
     };
 
     setValue([newTasks, ...tasks]);
@@ -32,6 +32,32 @@ function TaskManager() {
     const newTasks = tasks.filter((task) => task.id !== id);
     setValue(newTasks);
   };
+
+  const handleCompleted = (id) => {
+    const newTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return{
+          ...task,
+          completed: !task.completed,
+
+        };
+
+      }
+      return task;
+    });
+    setValue(newTasks);
+
+   };
+     const handleEdit = (id) => {
+      const newTasks = tasks.filter((tasks) => {
+        if (tasks.id === id){
+          setInput(tasks.text);
+          return fasle;
+        }
+        return tasks;
+     });
+     setValue(newTasks);
+    }
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -59,7 +85,12 @@ function TaskManager() {
         <div className="space-y-2 overflow-y-auto h-56">
           {tasks.map((task) => {
             return (
-              <TaskItem key={task.id} task={task} handleDelete={handleDelete} />
+              <TaskItem key={task.id} 
+              task={task} 
+              handleDelete={handleDelete} 
+              handleCompleted={handleCompleted}
+              handleEdit={handleEdit}
+           />
             );
           })}
           {/* <TaskItems/>
